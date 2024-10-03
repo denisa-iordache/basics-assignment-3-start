@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   // styleUrls: ['./app.component.css']
   styles: [`.newTextColor{
-    color: grey;
+    color: white;
 }`]
 })
 export class AppComponent {
@@ -14,12 +14,9 @@ export class AppComponent {
   count = 0;
 
   onDisplayPress(){
-    this.displayPassword = true;
-    this.count++;
-    this.clicks.push(this.count);
+    this.displayPassword = !this.displayPassword;
+    // this.count++;
+    // this.clicks.push(this.count);
+    this.clicks.push(new Date());
   }
-
-  // getColor(){
-  //   return this.clicks.length > 4 ? 'blue' : 'red';
-// }
 }
